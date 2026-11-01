@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Перенаправление...</title>
+    <script>
+        // Сохраняем путь, по которому хотел перейти пользователь
+        sessionStorage.setItem('redirectPath', window.location.pathname);
+        // Перенаправляем на главную страницу, где React подхватит маршрут
+        window.location.replace('/');
+    </script>
+</head>
+<body>
+    <p>Загрузка...</p>
+</body>
+</html>
