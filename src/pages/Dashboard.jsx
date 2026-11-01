@@ -129,7 +129,7 @@ function Dashboard() {
                         </div>
                     </div>
                     <div style={{ display: 'flex', gap: '12px' }}>
-                        <Link to="/profile" className="btn btn--ghost">Редактировать профиль</Link>
+                        {/* Кнопка "Редактировать профиль" удалена, так как страницы /profile не существует */}
                         <button onClick={handleLogout} className="btn btn--ghost">Выйти</button>
                     </div>
                 </div>
