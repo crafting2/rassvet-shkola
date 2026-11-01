@@ -12,8 +12,9 @@ import Footer from './components/Footer'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
+import Profile from './pages/Profile' // <-- Добавили импорт
 import Admin from './pages/Admin'
-import Privacy from './pages/Privacy' // <-- Добавили импорт
+import Privacy from './pages/Privacy'
 import ScrollToTop from './ScrollToTop'
 import './App.css'
 
@@ -56,8 +57,9 @@ function App() {
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
                         <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path="/profile" element={<Profile />} /> {/* <-- Добавили маршрут */}
                         <Route path="/admin" element={<Admin />} />
-                        <Route path="/privacy" element={<Privacy />} /> {/* <-- Добавили маршрут */}
+                        <Route path="/privacy" element={<Privacy />} />
                     </Routes>
                 </main>
                 <Footer />
