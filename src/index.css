@@ -1,0 +1,71 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #d6a4b2;
+    --primary-dark: #c48a99;
+    --accent: #e8c5ce;
+    --accent-dark: #d4a5b1;
+    --text: #4a3a40;
+    --text-light: #8a7a80;
+    --bg: #fdfbfc;
+    --bg-alt: #faf4f6;
+    --border: #f0e2e6;
+    --radius: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: var(--bg);
+}
+
+/* ===== СТИЛИ ДЛЯ РЕДАКТОРА TIPTAP ===== */
+.tiptap-editor-content {
+    min-height: 150px;
+    outline: none;
+    cursor: text;
+    padding: 8px;
+    color: #3a4a52 !important;
+    opacity: 1 !important;
+    font-size: 1.1rem;
+}
+
+.tiptap-editor-content p {
+    margin: 0 0 8px 0;
+    color: #3a4a52 !important;
+}
+
+.tiptap-editor-content p:last-child {
+    margin-bottom: 0;
+}
+
+.tiptap-editor-content ul,
+.tiptap-editor-content ol {
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: #3a4a52 !important;
+}
+
+.tiptap-editor-content span {
+    white-space: pre-wrap;
+}
+
+/* Стили для панели инструментов Tiptap */
+.tiptap-toolbar {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    background: #f9fafb;
+    flex-wrap: wrap;
+    align-items: center;
+}
