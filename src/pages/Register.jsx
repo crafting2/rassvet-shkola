@@ -14,6 +14,10 @@ function Register() {
 
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(false)
+    
+    // НОВОЕ: Состояние для показа/скрытия пароля
+    const [showPassword, setShowPassword] = useState(false)
+    
     const navigate = useNavigate()
 
     const handleImageChange = (e) => {
@@ -128,14 +132,38 @@ function Register() {
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                    <input
-                        type="password"
-                        placeholder="Пароль (мин. 6 символов)"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                        minLength="6"
-                    />
+                    
+                    {/* НОВОЕ: Обертка для поля пароля с глазиком */}
+                    <div style={{ position: 'relative', width: '100%' }}>
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Пароль (мин. 6 символов)"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                            minLength="6"
+                            style={{ width: '100%', paddingRight: '40px', boxSizing: 'border-box' }}
+                        />
+                        <button
+                            type="button"
+                            onClick={() => setShowPassword(!showPassword)}
+                            style={{
+                                position: 'absolute',
+                                right: '10px',
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                fontSize: '1.2rem',
+                                padding: '0',
+                                color: '#666'
+                            }}
+                            title={showPassword ? "Скрыть пароль" : "Показать пароль"}
+                        >
+                            {showPassword ? '👁️' : '🙈'}
+                        </button>
+                    </div>
 
                     {error && <p className="auth-error">{error}</p>}
 
